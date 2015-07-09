@@ -6,7 +6,8 @@ var db;
 
 module.exports = function () {
     if (db === undefined) {
-        db = mongoose.connect(db_url.test).connection;
+        _db = mongoose.connect(db_url.test);
+        db = _db.connection;
 
         db.on('connected', function () {
             console.log('Mongoose default connection open');
@@ -18,5 +19,6 @@ module.exports = function () {
             console.log('Não Connectou: ' + err.message);
         });
     }
+
     return db;
 };

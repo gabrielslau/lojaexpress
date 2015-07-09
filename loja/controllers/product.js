@@ -7,7 +7,10 @@ module.exports = function (app) {
         add: function (req, res) {
             var body = req.body;
             mProduct.create(body, function (err, prod) {
-                if (err) res.send({status: 'error'});
+                if (err){
+                    res.status(400);
+                    res.send({status: 'error', message: 'invalid data'});
+                }
                 else res.send({status: 'success', product: prod})
             });
         }

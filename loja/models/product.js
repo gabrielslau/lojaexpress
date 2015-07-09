@@ -6,7 +6,7 @@ module.exports = function (app) {
         var db = require('../libs/db_connect')();
         var schema = require('mongoose').Schema;
         var Product = schema({
-            name : { type: String, required: true},
+            name : { type: String, required: true, unique: true},
             value : { type: Number, required: true}
         });
         console.log('Criado model product');
