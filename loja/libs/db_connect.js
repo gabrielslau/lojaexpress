@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var db_url = {
-    test: 'mongodb://localhost:27017/loja'
+    test: 'mongodb://linkest:linkest#1234567@ds036698.mongolab.com:36698/loja'
 };
 var db;
 
