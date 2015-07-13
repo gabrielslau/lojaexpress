@@ -14,9 +14,7 @@ module.exports = function(app) {
                         status: 'success',
                         cart: cart
                     });
-
                 } else {
-                    res.status(400);
                     res.send({message: 'invalid data'})
                 }
             });

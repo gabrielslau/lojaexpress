@@ -21,5 +21,19 @@ describe('Cart', function () {
                 done();
             });
     });
+
+    it('deve acusar erro ao criar carrinho sem informar o usuário', function (done) {
+
+        var cart = {};
+
+        request(url)
+            .post('/cart')
+            .send(cart)
+            .expect(400)
+            .end(function (err, res) {
+                res.body.should.not.have.property('cart');
+                done();
+            });
+    });
 });
 
