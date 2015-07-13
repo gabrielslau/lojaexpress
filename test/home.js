@@ -15,7 +15,7 @@ describe('Home', function () {
                 .expect(200)
                 .end(function (err, res) {
                     if (err) throw err;
-                    res.body.status.should.equal('runing v2.0');
+                    res.body.status.should.equal('runing v3.0');
                     done();
                 });
         });
