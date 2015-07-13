@@ -4,7 +4,7 @@
 module.exports = function (app) {
     return {
         index: function (req, res) {
-            res.send({status: 'runing'});
+            res.send({status: 'runing v2.0'});
         },
         create_cart: function (req, res) {
             res.send({
