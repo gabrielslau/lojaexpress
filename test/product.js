@@ -5,7 +5,7 @@ var should = require('should');
 var assert = require('assert');
 var request = require('supertest');
 var mongoose = require('mongoose');
-var app = require('../app');
+var app = require('../server');
 
 describe('Teste de integração das funções relacionadas a produtos', function () {
     var url = 'http://localhost:3000';
@@ -73,6 +73,4 @@ describe('Teste de integração das funções relacionadas a produtos', function () 
                 done();
             });
     });
-
-
 });
